@@ -22,19 +22,23 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                     .requestMatchers(
-                            "/swagger-ui.html",
-                            "/swagger-ui/**",
-                            "/v3/api-docs/**",
-                            "/h2-console/**",
-                            "/hello",
-                            "/error"
-                    ).permitAll()
+                         "/",
+                          "/index.html",
+                         "/swagger-ui.html",
+                          "/swagger-ui/**",
+                          "/v3/api-docs/**",
+                           "/h2-console/**",
+                         "/hello",
+                          "/error",
+                          "/css/**",
+                          "/js/**"
+                        ).permitAll()
 
                     .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                     .requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN")
                     .requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN")
-
+                        .requestMatchers("/admin.html").authenticated()
                     .anyRequest().authenticated()
             )
             .httpBasic(Customizer.withDefaults());

@@ -1,39 +1,125 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #111111;
+    background-color: #050505;
     color: white;
     margin: 0;
-    padding: 40px;
 }
 
-h1 {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    background-color: #0b0f17;
+    border-bottom: 1px solid #1a1f2b;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: #00d084;
+    color: #041018;
+    border-radius: 14px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
     color: #ff4d6d;
 }
 
-p {
-    color: #dddddd;
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
 }
 
-button {
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+    background-color: #0b0f17;
+    padding: 60px 40px;
+    border-radius: 24px;
+}
+
+.tagline {
+    color: #00d084;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+.hero-text {
+    font-size: 24px;
+    color: #cfcfcf;
+    line-height: 1.5;
+    margin-bottom: 36px;
+}
+
+.hero-button {
+    display: inline-block;
     background-color: #ff4d6d;
     color: white;
-    border: none;
-    padding: 12px 18px;
-    margin-right: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 14px;
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-button:hover {
+.hero-button:hover {
     opacity: 0.9;
 }
+.login-button {
+    background-color: #00d084;
+    color: #041018 !important;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+}
 
-#output {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #1c1c1c;
-    border-radius: 8px;
-    color: #f5f5f5;
+.login-button:hover {
+    color: #041018 !important;
+    opacity: 0.9;
+}
+.active-link {
+    background-color: #00d084;
+    color: #041018 !important;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: bold;
 }

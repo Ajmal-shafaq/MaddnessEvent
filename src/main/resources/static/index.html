@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MadnessEvents Admin</title>
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <title>MadnessEvents</title>
+    <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
-    <h1>MadnessEvents Admin Dashboard</h1>
-    <p>Manage events, DJs, tickets, and merchandise.</p>
+    <header class="navbar">
+        <div class="logo">
+    <span class="logo-icon">M</span>
+    <span class="logo-text">MadnessEvents</span>
+            </div>
+        <nav class="nav-links">
+            <a href="#" class="active-link">Home</a>
+            <a href="#">DJs</a>
+            <a href="#">Tickets</a>
+            <a href="#">Shop</a>
+            <a href="admin.html" class="login-button">Login</a>
+        </nav>
+    </header>
 
-    <div>
-        <button>Load Events</button>
-        <button>Load DJs</button>
-        <button>Load Tickets</button>
-        <button>Load Merchandise</button>
-    </div>
-
-    <hr>
-
-    <div id="output">
-        Data will appear here.
-    </div>
-
-    <script src="js/app.js"></script>
+    <main class="hero">
+        <div class="hero-content">
+            <p class="tagline">Electronic Music Community</p>
+            <h1>Welcome to MadnessEvents</h1>
+            <p class="hero-text">
+                Experience the ultimate electronic music events, discover DJs,
+                buy tickets, and explore exclusive merchandise.
+            </p>
+            <a class="hero-button" href="#">Explore Events</a>
+        </div>
+    </main>
 </body>
 </html>
