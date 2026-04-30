@@ -21,7 +21,7 @@ public class MerchandiseService {
         return merchandiseRepository.findAll();
     }
 
-    public Merchandise findById(Long id) {
+    public Merchandise findById(long id) {
         return merchandiseRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Merchandise not found"));
     }
@@ -41,7 +41,7 @@ public class MerchandiseService {
     return merchandiseRepository.save(merchandise);
 }
 
-    public void deleteById(Long id) {
+    public void deleteById(long id) {
         merchandiseRepository.deleteById(id);
     }
 }
