@@ -22,17 +22,22 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                     .requestMatchers(
-                         "/",
-                          "/index.html",
-                         "/swagger-ui.html",
-                          "/swagger-ui/**",
-                          "/v3/api-docs/**",
-                           "/h2-console/**",
-                         "/hello",
-                          "/error",
-                          "/css/**",
-                          "/js/**"
-                        ).permitAll()
+                         
+        "/",
+        "/index.html",
+        "/djs.html",
+        "/tickets.html",
+        "/shop.html",
+        "/swagger-ui.html",
+        "/swagger-ui/**",
+        "/v3/api-docs/**",
+        "/h2-console/**",
+        "/hello",
+        "/error",
+        "/css/**",
+        "/js/**",
+        "/images/**"
+        ).permitAll()
 
                     .requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                     .requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN")
